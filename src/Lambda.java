@@ -3,23 +3,17 @@ import java.util.function.Function;
 
 public class Lambda {
 
-    /**
-     * Function to get max value.
-     *
-     * @return lambda expression.
-     */
     public static BiFunction<Double, Double, Double> getMax() {
-        // TODO replace null with lambda expression
-        return null;
+        return (x, y) -> {
+            if (x >= y) {
+                return x;
+            } else {
+                return y;
+            }
+        };
     }
 
-    /**
-     * Function to get square root.
-     *
-     * @return lambda expression.
-     */
     public static Function<Double, Double> getSqrt() {
-        // TODO replace null with method reference
-        return null;
+        return Math::sqrt;
     }
 }
